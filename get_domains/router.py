@@ -9,6 +9,7 @@ from domain_server import *
 routers = [
         (r"/", MainHandler),
         (r"/ips/", MainHandler),
+        (r'/alldomains/', AllDomainsHandler)
         ]
 
 settings = dict(

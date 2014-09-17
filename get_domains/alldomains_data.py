@@ -2,13 +2,13 @@
 import pymongo
 import datetime
 
-class SubdomainData(object):
+class AllDomainsData(object):
 	"""docstring for SubdomainData"""
 	def __init__(self, server, username, password):
 		self.client = pymongo.MongoClient(server)
 		self.client.subdomains.authenticate(username, password)
 		db = self.client['subdomains']
-		self.collection = db['subdomains']
+		self.collection = db['alldomains']
 
 
 	def query(self, domain):
@@ -42,5 +42,5 @@ if __name__ == '__main__':
 	username = 'xsec'
 	password = 'xsec'
 
-	mongodb = SubdomainData(server, username, password)
+	mongodb = AllDomainsData(server, username, password)
 	

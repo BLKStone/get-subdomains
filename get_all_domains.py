@@ -2,6 +2,7 @@
 import json
 import time
 import requests
+import pymongodb
 
 #-------------------------------------------------------------------------
 # 获取公司所有域名信息
